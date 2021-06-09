@@ -7,5 +7,6 @@ export const AppStyled = styled.div`
   padding: 0;
   font-family: 'Open Sans Condensed', sans-serif;
   background: orange;
+  color: black;
 
 `

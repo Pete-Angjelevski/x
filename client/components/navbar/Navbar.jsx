@@ -15,6 +15,22 @@ const Navbar = () => {
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
+  function onMouseEnter () {
+    if (window.innerWidth < 960) {
+      setDropdown(false)
+    } else {
+      setDropdown(true)
+    }
+  }
+
+  function onMouseLeave () {
+    if (window.innerWidth < 960) {
+      setDropdown(false)
+    } else {
+      setDropdown(false)
+    }
+  }
+
   return (
     <NavbarStyled className='navbar'>
       <Link to='/' className='navbar-logo'>HI</Link>
@@ -29,7 +45,9 @@ const Navbar = () => {
           </Link>
         </li>
 
-        <li className="nav-item">
+        <li className="nav-item"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}>
           <Link to='/aboutme' className='nav-links' onClick={closeMobileMenu}>
             About Me <i className='fas fa-caret-down' />
           </Link>
