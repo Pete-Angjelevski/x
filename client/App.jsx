@@ -1,8 +1,18 @@
 import React from 'react'
 
+// COMPONENTS
+import Navbar from './components/navbar/Navbar'
+
+// STYLES
+import { AppStyled } from './AppStyled'
+
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+      <AppStyled>
+        <Navbar />
+      </AppStyled>
+    </>
   )
 }
 
