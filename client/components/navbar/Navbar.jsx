@@ -6,6 +6,7 @@ import Dropdown from './Dropdown'
 import { Button } from './Button'
 
 // STYLES
+import { NavbarStyled } from './NavbarStyle'
 
 const Navbar = () => {
   const [click, setClick] = useState(false)
@@ -15,9 +16,9 @@ const Navbar = () => {
   const closeMobileMenu = () => setClick(false)
 
   return (
-    <nav>
-      <Link to='/'>HI</Link>
-      <div onClick={handleClick}>
+    <NavbarStyled className='navbar'>
+      <Link to='/' className='navbar-logo'>HI</Link>
+      <div className='menu-icon' onClick={handleClick}>
         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
       </div>
       <ul className={click ? 'nav-menu active' : 'nav-menu'}>
@@ -47,7 +48,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-    </nav>
+    </NavbarStyled>
   )
 }
 
