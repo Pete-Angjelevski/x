@@ -4,14 +4,13 @@ import React from 'react'
 import Navbar from './components/navbar/Navbar'
 
 // STYLES
-import { AppStyled } from './AppStyled'
+import GlobalStyles from './GlobalStyles'
 
 const App = () => {
   return (
     <>
-      <AppStyled>
-        <Navbar />
-      </AppStyled>
+      <Navbar />
+      <GlobalStyles />
     </>
   )
 }
