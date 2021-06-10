@@ -1,10 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// COMPONENTS
+
+import options from './DropdownItems'
 
 const Dropdown = () => {
   return (
-    <div>
-      Hello
-    </div>
+    <ul>
+      {
+        options.map(option => {
+          return (
+            <li key={option.title}>
+              <Link to={option.path} >{option.title}</Link>
+            </li>
+          )
+        })
+      }
+    </ul>
   )
 }
 
