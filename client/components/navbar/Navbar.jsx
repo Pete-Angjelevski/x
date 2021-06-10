@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 // COMPONENTS
 import Dropdown from './Dropdown'
 
+// STYLES
+import { Nav, List} from './NavbarStyle'
+
+
 const Navbar = () => {
   const [open, setOpen] = useState(false)
 
@@ -12,30 +16,30 @@ const Navbar = () => {
   const onMouseLeave = () => setOpen(false)
 
   return (
-    <nav>
+    <Nav>
       <div>
         <h1>Art Blog</h1>
       </div>
 
-      <ul>
+      <List>
         <li>
-          <Link to='/'>Home</Link>
+          <Link className="link" to='/'>Home</Link>
         </li>
 
         <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          <Link to='/about'>About Me</Link>
+          <Link className="link" to='/about'>About Me</Link>
           {open && <Dropdown />}
         </li>
 
         <li>
-          <Link to='/store'>Store</Link>
+          <Link className="link" to='/store'>Store</Link>
         </li>
 
         <li>
-          <Link to='/cart'>Cart</Link>
+          <Link className="link" to='/cart'>Cart</Link>
         </li>
-      </ul>
-    </nav>
+      </List>
+    </Nav>
   )
 }
 

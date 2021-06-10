@@ -2,22 +2,24 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // COMPONENTS
-
 import options from './DropdownItems'
+
+// STYLES
+import { Drop, Li } from './DropdownStyle'
 
 const Dropdown = () => {
   return (
-    <ul>
+    <Drop>
       {
         options.map(option => {
           return (
-            <li key={option.title}>
-              <Link to={option.path} >{option.title}</Link>
-            </li>
+            <Li key={option.title}>
+              <Link className='link' to={option.path} >{option.title}</Link>
+            </Li>
           )
         })
       }
-    </ul>
+    </Drop>
   )
 }
 
